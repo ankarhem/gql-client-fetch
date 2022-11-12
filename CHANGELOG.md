@@ -1,5 +1,11 @@
 # gql-client-fetch
 
+## 0.0.3
+
+### Patch Changes
+
+- ad51728: omit default json type
+
 ## 0.0.2
 
 ### Patch Changes
