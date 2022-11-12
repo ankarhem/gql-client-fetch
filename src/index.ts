@@ -21,7 +21,7 @@ interface GqlResponse<TData> {
 }
 
 type TypedResponse<TData> = Promise<
-  Response & {
+  Omit<Response, 'json'> & {
     json: () => Promise<GqlResponse<ResultOf<TData>>>;
   }
 >;
