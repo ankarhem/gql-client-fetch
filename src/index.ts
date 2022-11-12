@@ -8,19 +8,19 @@ export type Exact<T extends { [key: string]: unknown }> = {
   [K in keyof T]: T[K];
 };
 
-type Error = {
+export type Error = {
   message: string;
   extensions?: {
     code?: string;
   };
 };
 
-interface GqlResponse<TData> {
+export interface GqlResponse<TData> {
   data?: TData;
   errors?: Error[];
 }
 
-type TypedResponse<TData> = Promise<
+export type TypedResponse<TData> = Promise<
   Omit<Response, 'json'> & {
     json: () => Promise<GqlResponse<ResultOf<TData>>>;
   }
