@@ -1,5 +1,11 @@
 # gql-client-fetch
 
+## 0.0.5
+
+### Patch Changes
+
+- 5d708e5: parse document
+
 ## 0.0.4
 
 ### Patch Changes
