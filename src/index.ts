@@ -3,6 +3,7 @@ import type {
   TypedDocumentNode,
   VariablesOf,
 } from '@graphql-typed-document-node/core';
+import { print } from 'graphql';
 
 export type Exact<T extends { [key: string]: unknown }> = {
   [K in keyof T]: T[K];
@@ -52,7 +53,7 @@ export async function gqlRequest<
     method: 'POST',
     headers,
     body: JSON.stringify({
-      query,
+      query: print(query),
       variables: variables,
     }),
   });
